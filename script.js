@@ -11,7 +11,7 @@ const i18n = {
     "hero.role2": "Full Stack Developer",
     "hero.desc": "Building enterprise CRM solutions and innovative digital products at Capgemini. Epitech 2025 graduate, passionate about meaningful technology.",
     "hero.cta1": "Get in touch", "hero.cta2": "See my work",
-    "hero.stat1": "Internships", "hero.stat2": "at Epitech", "hero.stat3": "Diplomas", "hero.stat4": "Countries",
+    "hero.stat1": "Experiences", "hero.stat2": "at Epitech", "hero.stat3": "Diplomas", "hero.stat4": "Countries",
     "hero.scroll": "Scroll",
     "hero.card.status": "Currently employed", "hero.card.type": "CDI",
     "hero.card.role": "Microsoft Dynamics Consultant",
@@ -98,7 +98,7 @@ const i18n = {
     "hero.role2": "Développeur Full Stack",
     "hero.desc": "Je construis des solutions CRM d'entreprise et des produits numériques innovants chez Capgemini. Diplômé Epitech 2025, passionné par la technologie utile.",
     "hero.cta1": "Me contacter", "hero.cta2": "Voir mes projets",
-    "hero.stat1": "Stages", "hero.stat2": "à Epitech", "hero.stat3": "Diplômes", "hero.stat4": "Pays",
+    "hero.stat1": "Expériences", "hero.stat2": "à Epitech", "hero.stat3": "Diplômes", "hero.stat4": "Pays",
     "hero.scroll": "Défiler",
     "hero.card.status": "En poste", "hero.card.type": "CDI",
     "hero.card.role": "Consultant Microsoft Dynamics",
@@ -295,7 +295,7 @@ const revealObserver = new IntersectionObserver(entries => {
   });
 }, { threshold: 0.1, rootMargin: '0px 0px -40px 0px' });
 
-document.querySelectorAll('.reveal-up, .reveal-clip').forEach(el => revealObserver.observe(el));
+document.querySelectorAll('.reveal-up, .reveal-clip, .reveal-left, .reveal-right, .reveal-scale').forEach(el => revealObserver.observe(el));
 
 /* ═══════════════════════════════════════════
    COUNTER ANIMATION
@@ -448,7 +448,7 @@ applyLang(lang);
 /* Hero letter animation + hero reveal-ups on load */
 requestAnimationFrame(() => {
   document.querySelectorAll('.nl').forEach(el => el.classList.add('visible'));
-  document.querySelectorAll('#hero .reveal-up, #hero .reveal-clip').forEach(el => {
+  document.querySelectorAll('#hero .reveal-up, #hero .reveal-clip, #hero .reveal-left, #hero .reveal-right, #hero .reveal-scale').forEach(el => {
     el.classList.add('visible', 'words-vis');
     el.querySelectorAll('.w').forEach(s => s.classList.add('visible'));
   });
