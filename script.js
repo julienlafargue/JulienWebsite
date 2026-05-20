@@ -11,7 +11,8 @@ const i18n = {
     "hero.role2": "Full Stack Developer",
     "hero.desc": "Building enterprise CRM solutions and innovative digital products at Capgemini. Epitech 2025 graduate, passionate about meaningful technology.",
     "hero.cta1": "Get in touch", "hero.cta2": "See my work",
-    "hero.stat1": "Internships", "hero.stat2": "Epitech Grad", "hero.stat3": "Countries",
+    "hero.stat1": "Internships", "hero.stat2": "at Epitech", "hero.stat3": "Diplomas", "hero.stat4": "Countries",
+    "hero.scroll": "Scroll",
     "hero.card.status": "Currently employed", "hero.card.type": "CDI",
     "hero.card.role": "Microsoft Dynamics Consultant",
 
@@ -21,8 +22,8 @@ const i18n = {
     "about.p3": "Before my current role, I built a 3D AI-powered train simulation at Groupe SII, and led a team to create a sign language video platform as my end-of-study project. Outside the office: marathons, rugby, and travel.",
 
     "info.location": "Location", "info.status": "Status",
-    "info.employed": "Full-time at Capgemini",
-    "info.degree": "Degree", "info.degree.val": "Expert en ingénierie Logiciel",
+    "info.employed": "CDI · Capgemini",
+    "info.degree": "Degrees", "info.degree.val": "Epitech + TU Dublin",
     "info.languages": "Languages", "info.interests": "Interests",
     "info.hobbies": "Marathon · Rugby · Travel",
 
@@ -97,7 +98,8 @@ const i18n = {
     "hero.role2": "Développeur Full Stack",
     "hero.desc": "Je construis des solutions CRM d'entreprise et des produits numériques innovants chez Capgemini. Diplômé Epitech 2025, passionné par la technologie utile.",
     "hero.cta1": "Me contacter", "hero.cta2": "Voir mes projets",
-    "hero.stat1": "Stages", "hero.stat2": "Promo Epitech", "hero.stat3": "Pays",
+    "hero.stat1": "Stages", "hero.stat2": "à Epitech", "hero.stat3": "Diplômes", "hero.stat4": "Pays",
+    "hero.scroll": "Défiler",
     "hero.card.status": "En poste", "hero.card.type": "CDI",
     "hero.card.role": "Consultant Microsoft Dynamics",
 
@@ -107,8 +109,8 @@ const i18n = {
     "about.p3": "Avant mon poste actuel, j'ai créé une simulation de train 3D basée sur l'IA chez Groupe SII, et j'ai dirigé une équipe pour créer une plateforme de vidéos en langue des signes. En dehors du bureau : marathons, rugby et voyages.",
 
     "info.location": "Localisation", "info.status": "Statut",
-    "info.employed": "CDI chez Capgemini",
-    "info.degree": "Diplôme", "info.degree.val": "Expert en ingénierie Logiciel",
+    "info.employed": "CDI · Capgemini",
+    "info.degree": "Diplômes", "info.degree.val": "Epitech + TU Dublin",
     "info.languages": "Langues", "info.interests": "Centres d'intérêt",
     "info.hobbies": "Marathon · Rugby · Voyages",
 
@@ -179,7 +181,7 @@ const i18n = {
    STATE
 ═══════════════════════════════════════════ */
 let lang  = localStorage.getItem('jl-lang')  || 'en';
-let theme = localStorage.getItem('jl-theme') || 'dark';
+let theme = localStorage.getItem('jl-theme') || 'light';
 
 /* ═══════════════════════════════════════════
    LANGUAGE
@@ -229,6 +231,15 @@ mobileMenu.querySelectorAll('a').forEach(a => {
     hamburger.classList.remove('open');
   });
 });
+
+/* ═══════════════════════════════════════════
+   SCROLL PROGRESS BAR
+═══════════════════════════════════════════ */
+const progressBar = document.getElementById('progressBar');
+window.addEventListener('scroll', () => {
+  const pct = scrollY / (document.documentElement.scrollHeight - innerHeight) * 100;
+  if (progressBar) progressBar.style.width = pct + '%';
+}, { passive: true });
 
 /* ═══════════════════════════════════════════
    NAVBAR
@@ -414,3 +425,11 @@ document.querySelectorAll('.skill-cat').forEach(cat => {
 ═══════════════════════════════════════════ */
 applyTheme(theme);
 applyLang(lang);
+
+/* Trigger hero letter-by-letter animation */
+requestAnimationFrame(() => {
+  document.querySelectorAll('.nl').forEach(el => el.classList.add('visible'));
+  document.querySelectorAll('.reveal-up, .reveal-clip').forEach(el => {
+    if (el.closest('#hero')) el.classList.add('visible');
+  });
+});
