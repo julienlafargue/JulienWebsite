@@ -180,8 +180,23 @@ const i18n = {
 /* ═══════════════════════════════════════════
    STATE
 ═══════════════════════════════════════════ */
-let lang  = localStorage.getItem('jl-lang')  || 'en';
-let theme = localStorage.getItem('jl-theme') || 'light';
+let lang = localStorage.getItem('jl-lang') || 'en';
+
+/* ═══════════════════════════════════════════
+   WORD SPLIT — used on about paragraphs
+═══════════════════════════════════════════ */
+const WORD_SPLIT_KEYS = new Set(['about.p1', 'about.p2', 'about.p3']);
+
+function splitWords(el) {
+  const text = el.textContent.trim();
+  if (!text) return;
+  el.innerHTML = text.split(/\s+/).map((w, i) =>
+    `<span class="w" style="--wi:${i}">${w}</span>`
+  ).join(' ');
+  if (el.classList.contains('words-vis')) {
+    el.querySelectorAll('.w').forEach(s => s.classList.add('visible'));
+  }
+}
 
 /* ═══════════════════════════════════════════
    LANGUAGE
@@ -191,8 +206,11 @@ function applyLang(l) {
   localStorage.setItem('jl-lang', l);
   document.documentElement.lang = l;
   document.querySelectorAll('[data-i18n]').forEach(el => {
-    const v = i18n[l][el.dataset.i18n];
-    if (v !== undefined) el.innerHTML = v;
+    const key = el.dataset.i18n;
+    const v = i18n[l][key];
+    if (v === undefined) return;
+    el.innerHTML = v;
+    if (WORD_SPLIT_KEYS.has(key)) splitWords(el);
   });
   document.getElementById('langToggle').textContent = l === 'en' ? 'FR' : 'EN';
   document.title = l === 'en'
@@ -201,18 +219,6 @@ function applyLang(l) {
 }
 
 document.getElementById('langToggle').addEventListener('click', () => applyLang(lang === 'en' ? 'fr' : 'en'));
-
-/* ═══════════════════════════════════════════
-   THEME
-═══════════════════════════════════════════ */
-function applyTheme(t) {
-  theme = t;
-  localStorage.setItem('jl-theme', t);
-  document.documentElement.setAttribute('data-theme', t);
-  document.getElementById('themeIcon').className = t === 'dark' ? 'fas fa-sun' : 'fas fa-moon';
-}
-
-document.getElementById('themeToggle').addEventListener('click', () => applyTheme(theme === 'dark' ? 'light' : 'dark'));
 
 /* ═══════════════════════════════════════════
    MOBILE MENU
@@ -233,19 +239,30 @@ mobileMenu.querySelectorAll('a').forEach(a => {
 });
 
 /* ═══════════════════════════════════════════
-   SCROLL PROGRESS BAR
+   SCROLL — progress bar + navbar + hero parallax
 ═══════════════════════════════════════════ */
-const progressBar = document.getElementById('progressBar');
-window.addEventListener('scroll', () => {
-  const pct = scrollY / (document.documentElement.scrollHeight - innerHeight) * 100;
-  if (progressBar) progressBar.style.width = pct + '%';
-}, { passive: true });
+const progressBar  = document.getElementById('progressBar');
+const navbar       = document.getElementById('navbar');
+const heroEl       = document.getElementById('hero');
 
-/* ═══════════════════════════════════════════
-   NAVBAR
-═══════════════════════════════════════════ */
-const navbar = document.getElementById('navbar');
-window.addEventListener('scroll', () => navbar.classList.toggle('scrolled', scrollY > 20), { passive: true });
+window.addEventListener('scroll', () => {
+  const sy = window.scrollY;
+
+  /* Progress bar */
+  if (progressBar) {
+    progressBar.style.width =
+      (sy / (document.documentElement.scrollHeight - innerHeight) * 100) + '%';
+  }
+
+  /* Navbar */
+  navbar.classList.toggle('scrolled', sy > 20);
+
+  /* Hero parallax — only while hero is in view */
+  if (heroEl) {
+    const progress = Math.min(sy / (innerHeight * 0.9), 1);
+    heroEl.style.setProperty('--hero-scroll', progress);
+  }
+}, { passive: true });
 
 /* Active nav link */
 const sections = document.querySelectorAll('section[id]');
@@ -270,10 +287,13 @@ const revealObserver = new IntersectionObserver(entries => {
   entries.forEach(e => {
     if (e.isIntersecting) {
       e.target.classList.add('visible');
+      /* trigger word-split children if present */
+      e.target.classList.add('words-vis');
+      e.target.querySelectorAll('.w').forEach(s => s.classList.add('visible'));
       revealObserver.unobserve(e.target);
     }
   });
-}, { threshold: 0.1, rootMargin: '0px 0px -50px 0px' });
+}, { threshold: 0.1, rootMargin: '0px 0px -40px 0px' });
 
 document.querySelectorAll('.reveal-up, .reveal-clip').forEach(el => revealObserver.observe(el));
 
@@ -319,7 +339,7 @@ const langBarObs = new IntersectionObserver(entries => {
   });
 }, { threshold: 0.3 });
 
-const langWrap = document.querySelector('.lang-wrap');
+const langWrap = document.querySelector('.lang-section');
 if (langWrap) langBarObs.observe(langWrap);
 
 /* ═══════════════════════════════════════════
@@ -423,13 +443,13 @@ document.querySelectorAll('.skill-cat').forEach(cat => {
 /* ═══════════════════════════════════════════
    INIT
 ═══════════════════════════════════════════ */
-applyTheme(theme);
 applyLang(lang);
 
-/* Trigger hero letter-by-letter animation */
+/* Hero letter animation + hero reveal-ups on load */
 requestAnimationFrame(() => {
   document.querySelectorAll('.nl').forEach(el => el.classList.add('visible'));
-  document.querySelectorAll('.reveal-up, .reveal-clip').forEach(el => {
-    if (el.closest('#hero')) el.classList.add('visible');
+  document.querySelectorAll('#hero .reveal-up, #hero .reveal-clip').forEach(el => {
+    el.classList.add('visible', 'words-vis');
+    el.querySelectorAll('.w').forEach(s => s.classList.add('visible'));
   });
 });
