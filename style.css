@@ -59,9 +59,9 @@ body::after {
 
 /* ═══ PROGRESS BAR ═══ */
 .progress-bar {
-  position: fixed; top: 0; left: 0; height: 2px;
+  position: fixed; top: var(--nav-h); left: 0; height: 2px;
   background: linear-gradient(90deg, var(--primary), var(--gold));
-  width: 0%; z-index: 500; transition: width 0.1s linear;
+  width: 0%; z-index: 199; transition: width 0.1s linear;
 }
 
 /* ═══ CURSOR ═══ */
