@@ -3,163 +3,233 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Julien Lafargue — Full Stack Developer & Project Manager</title>
-  <meta name="description" content="Portfolio of Julien Lafargue, Full Stack Developer & Project Manager. Epitech graduate available from October 2025." />
+  <title>Julien Lafargue — Microsoft Dynamics Consultant & Full Stack Developer</title>
+  <meta name="description" content="Julien Lafargue — Microsoft Dynamics Consultant at Capgemini. Epitech 2025, Expert en ingénierie Logiciel." />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800;900&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
   <link rel="stylesheet" href="style.css" />
 </head>
 <body>
 
-  <!-- ═══════════════════════ NAVBAR ═══════════════════════ -->
+  <!-- Cursor -->
+  <div class="cursor" id="cursor"></div>
+  <div class="cursor-ring" id="cursorRing"></div>
+
+  <!-- ══════════════════ NAVBAR ══════════════════ -->
   <nav id="navbar">
     <div class="nav-inner">
-      <a href="#hero" class="nav-brand">JL<span class="brand-dot">.</span></a>
+      <a href="#hero" class="nav-brand">
+        <svg class="logo-svg" width="40" height="40" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <rect width="40" height="40" rx="11" fill="url(#logoGrad)"/>
+          <defs>
+            <linearGradient id="logoGrad" x1="0" y1="0" x2="40" y2="40" gradientUnits="userSpaceOnUse">
+              <stop stop-color="#a78bfa"/>
+              <stop offset="1" stop-color="#f97316"/>
+            </linearGradient>
+          </defs>
+          <!-- J -->
+          <path d="M13 11h4.5v15.2c0 1.6-.5 2.8-1.4 3.7C15.2 30.8 14 31.2 12.5 31.2c-1.2 0-2.2-.3-3-.9l1.3-2.1c.4.3.9.5 1.5.5.5 0 .9-.2 1.2-.5.3-.3.5-.8.5-1.4V11z" fill="white"/>
+          <!-- L -->
+          <path d="M22 11h3v17.2h6.5V31H22V11z" fill="white"/>
+        </svg>
+      </a>
       <div class="nav-links">
         <a href="#about"      data-i18n="nav.about">About</a>
         <a href="#experience" data-i18n="nav.experience">Experience</a>
         <a href="#skills"     data-i18n="nav.skills">Skills</a>
-        <a href="#education"  data-i18n="nav.education">Education</a>
+        <a href="#projects"   data-i18n="nav.projects">Projects</a>
         <a href="#contact"    data-i18n="nav.contact">Contact</a>
       </div>
       <div class="nav-actions">
-        <button class="lang-btn" id="langToggle" aria-label="Switch language">FR</button>
-        <button class="theme-btn" id="themeToggle" aria-label="Toggle theme">
-          <i class="fas fa-sun" id="themeIcon"></i>
-        </button>
-        <button class="hamburger" id="hamburger" aria-label="Menu">
-          <span></span><span></span><span></span>
-        </button>
+        <button class="lang-btn" id="langToggle">FR</button>
+        <button class="theme-btn" id="themeToggle"><i class="fas fa-sun" id="themeIcon"></i></button>
+        <button class="hamburger" id="hamburger"><span></span><span></span><span></span></button>
       </div>
     </div>
   </nav>
 
-  <!-- Mobile menu -->
   <div class="mobile-menu" id="mobileMenu">
     <a href="#about"      data-i18n="nav.about">About</a>
     <a href="#experience" data-i18n="nav.experience">Experience</a>
     <a href="#skills"     data-i18n="nav.skills">Skills</a>
-    <a href="#education"  data-i18n="nav.education">Education</a>
+    <a href="#projects"   data-i18n="nav.projects">Projects</a>
     <a href="#contact"    data-i18n="nav.contact">Contact</a>
   </div>
 
-  <!-- ═══════════════════════ HERO ═══════════════════════ -->
+  <!-- ══════════════════ HERO ══════════════════ -->
   <section id="hero">
     <div class="hero-bg">
       <div class="blob blob-1"></div>
       <div class="blob blob-2"></div>
       <div class="blob blob-3"></div>
-      <div class="grid-overlay"></div>
     </div>
-    <div class="hero-content">
-      <div class="hero-badge reveal">
-        <span class="badge-dot"></span>
-        <span data-i18n="hero.available">Open to opportunities from October 2025</span>
-      </div>
-      <h1 class="hero-name reveal">
-        Julien<br /><span class="accent-gradient">Lafargue</span>
-      </h1>
-      <p class="hero-title reveal">
-        <span class="mono">&lt;</span>
-        <span data-i18n="hero.title">Full Stack Developer &amp; Project Manager</span>
-        <span class="mono">/&gt;</span>
-      </p>
-      <p class="hero-desc reveal" data-i18n="hero.desc">
-        Epitech student building innovative digital solutions — web, mobile, AI & project management across multiple industries.
-      </p>
-      <div class="hero-cta reveal">
-        <a href="#contact" class="btn btn-primary">
-          <i class="fas fa-paper-plane"></i>
-          <span data-i18n="hero.cta1">Get in touch</span>
-        </a>
-        <a href="#experience" class="btn btn-outline">
-          <i class="fas fa-arrow-down"></i>
-          <span data-i18n="hero.cta2">View my work</span>
-        </a>
-      </div>
-      <div class="hero-stats reveal">
-        <div class="stat">
-          <span class="stat-num">5+</span>
-          <span class="stat-label" data-i18n="hero.stat1">Internships</span>
+
+    <div class="hero-inner container">
+      <!-- Left text block -->
+      <div class="hero-text">
+        <p class="hero-greeting reveal-up" data-i18n="hero.greeting">Hello, I'm</p>
+
+        <h1 class="hero-name">
+          <span class="name-line reveal-clip">Julien</span>
+          <span class="name-line reveal-clip delay-1">
+            <span class="name-gradient">Lafargue</span>
+          </span>
+        </h1>
+
+        <p class="hero-role reveal-up delay-2">
+          <span data-i18n="hero.role1">Microsoft Dynamics Consultant</span>
+          <span class="role-sep">·</span>
+          <span data-i18n="hero.role2">Full Stack Developer</span>
+        </p>
+
+        <p class="hero-desc reveal-up delay-3" data-i18n="hero.desc">
+          Building enterprise CRM solutions and innovative digital products at Capgemini. Epitech graduate, passionate about meaningful technology.
+        </p>
+
+        <div class="hero-cta reveal-up delay-4">
+          <a href="#contact" class="btn btn-primary magnetic">
+            <i class="fas fa-paper-plane"></i>
+            <span data-i18n="hero.cta1">Get in touch</span>
+          </a>
+          <a href="#projects" class="btn btn-ghost magnetic">
+            <span data-i18n="hero.cta2">See my work</span>
+            <i class="fas fa-arrow-right"></i>
+          </a>
         </div>
-        <div class="stat-divider"></div>
-        <div class="stat">
-          <span class="stat-num">5</span>
-          <span class="stat-label" data-i18n="hero.stat2">Years at Epitech</span>
+
+        <div class="hero-stats reveal-up delay-5">
+          <div class="stat">
+            <span class="stat-num" data-count="5" data-suffix="+">5+</span>
+            <span class="stat-label" data-i18n="hero.stat1">Internships</span>
+          </div>
+          <div class="stat-line"></div>
+          <div class="stat">
+            <span class="stat-num" data-count="2025" data-suffix="">2025</span>
+            <span class="stat-label" data-i18n="hero.stat2">Epitech Grad</span>
+          </div>
+          <div class="stat-line"></div>
+          <div class="stat">
+            <span class="stat-num" data-count="2" data-suffix="">2</span>
+            <span class="stat-label" data-i18n="hero.stat3">Countries</span>
+          </div>
         </div>
-        <div class="stat-divider"></div>
-        <div class="stat">
-          <span class="stat-num">2</span>
-          <span class="stat-label" data-i18n="hero.stat3">Countries</span>
+      </div>
+
+      <!-- Right card -->
+      <div class="hero-card-wrap reveal-up delay-3">
+        <div class="hero-card float-anim">
+          <div class="hc-top">
+            <div class="hc-company-badge">
+              <div class="hc-company-dot"></div>
+              <span data-i18n="hero.card.status">Currently employed</span>
+            </div>
+            <span class="hc-type-badge" data-i18n="hero.card.type">CDI</span>
+          </div>
+          <div class="hc-role">
+            <i class="fas fa-briefcase hc-icon"></i>
+            <div>
+              <p class="hc-role-title" data-i18n="hero.card.role">Microsoft Dynamics Consultant</p>
+              <p class="hc-company">Capgemini</p>
+            </div>
+          </div>
+          <div class="hc-divider"></div>
+          <div class="hc-tags">
+            <span class="hc-tag">Microsoft Dynamics</span>
+            <span class="hc-tag">Copilot Studio</span>
+            <span class="hc-tag">Power Platform</span>
+            <span class="hc-tag">AI / ChatBot</span>
+          </div>
+          <div class="hc-location">
+            <i class="fas fa-map-marker-alt"></i>
+            <span>Paris, France</span>
+          </div>
+
+          <!-- Decorative rings -->
+          <div class="hc-ring hc-ring-1"></div>
+          <div class="hc-ring hc-ring-2"></div>
+        </div>
+
+        <!-- Floating tags -->
+        <div class="float-tag ft-1 reveal-up delay-4">
+          <i class="fas fa-graduation-cap"></i> Epitech 2025
+        </div>
+        <div class="float-tag ft-2 reveal-up delay-5">
+          <i class="fas fa-globe"></i> Dublin 🇮🇪
         </div>
       </div>
     </div>
+
     <div class="scroll-hint">
-      <div class="scroll-line"></div>
+      <div class="scroll-mouse">
+        <div class="scroll-wheel"></div>
+      </div>
     </div>
   </section>
 
-  <!-- ═══════════════════════ ABOUT ═══════════════════════ -->
+  <!-- ══════════════════ ABOUT ══════════════════ -->
   <section id="about" class="section">
     <div class="container">
-      <div class="section-header reveal">
-        <span class="section-label mono" data-i18n="about.label">// about me</span>
-        <h2 data-i18n="about.title">Who am I?</h2>
+      <div class="section-header">
+        <span class="pill-label reveal-up" data-i18n="about.label">About me</span>
+        <h2 class="reveal-up delay-1" data-i18n="about.title">Who am I?</h2>
       </div>
       <div class="about-grid">
-        <div class="about-text reveal">
-          <p data-i18n="about.p1">I'm a 5th-year Epitech student specializing in Full Stack Development and Project Management, currently looking for my first position from October 2025.</p>
-          <p data-i18n="about.p2">My journey spans Unity game development, AI-based train simulations, CRM configuration at Capgemini, and building a sign language community platform from scratch. I love tackling complex problems in dynamic, innovative teams.</p>
-          <p data-i18n="about.p3">I spent a year at the Technological University of Dublin, sharpening my English and expanding my perspective. When I'm not coding, you'll find me on a marathon track (Paris 2025 finisher! 🏅), a rugby pitch, or exploring new countries.</p>
-          <div class="about-links">
-            <a href="mailto:julien.lafargue@epitech.eu" class="about-link">
-              <i class="fas fa-envelope"></i> julien.lafargue@epitech.eu
+        <div class="about-text">
+          <p class="reveal-up" data-i18n="about.p1">I'm a Full Stack Developer & Microsoft Dynamics Consultant, currently working full-time (CDI) at Capgemini after they hired me at the end of my internship. I build and configure enterprise CRM solutions, AI chatbots, and Power Platform applications for large-scale clients.</p>
+          <p class="reveal-up delay-1" data-i18n="about.p2">I graduated from Epitech (Promo 2025) with the title of Expert en ingénierie Logiciel — a rigorous 5-year program built entirely on hands-on, project-based learning. No lectures, just building real software from day one.</p>
+          <p class="reveal-up delay-2" data-i18n="about.p3">Before my current role, I built a 3D AI-powered train simulation at Groupe SII, and led a team to create a sign language video platform as my end-of-study project. Outside the office, I run marathons (Paris 2025 finisher 🏅), play rugby, and travel whenever I can.</p>
+          <div class="about-socials reveal-up delay-3">
+            <a href="mailto:julien.lafargue@epitech.eu" class="social-link" aria-label="Email">
+              <i class="fas fa-envelope"></i>
+              <span>julien.lafargue@epitech.eu</span>
             </a>
-            <a href="https://www.linkedin.com/in/julien-lafargue-400047197/" target="_blank" class="about-link">
-              <i class="fab fa-linkedin"></i> LinkedIn
+            <a href="https://www.linkedin.com/in/julien-lafargue-400047197/" target="_blank" class="social-link" aria-label="LinkedIn">
+              <i class="fab fa-linkedin"></i>
+              <span>LinkedIn</span>
             </a>
-            <a href="tel:+33781972851" class="about-link">
-              <i class="fas fa-phone"></i> +33 7 81 97 28 51
+            <a href="https://github.com/julienlafargue" target="_blank" class="social-link" aria-label="GitHub">
+              <i class="fab fa-github"></i>
+              <span>GitHub</span>
             </a>
           </div>
         </div>
-        <div class="about-card reveal">
-          <div class="info-card">
+        <div class="about-info reveal-up delay-2">
+          <div class="info-card tilt-card">
             <div class="info-row">
-              <span class="info-icon"><i class="fas fa-map-marker-alt"></i></span>
+              <div class="info-icon"><i class="fas fa-map-marker-alt"></i></div>
               <div>
-                <span class="info-label" data-i18n="about.location">Location</span>
-                <span class="info-value">France 🇫🇷</span>
+                <span class="info-label" data-i18n="info.location">Location</span>
+                <span class="info-value">Paris, France 🇫🇷</span>
               </div>
             </div>
             <div class="info-row">
-              <span class="info-icon"><i class="fas fa-graduation-cap"></i></span>
+              <div class="info-icon"><i class="fas fa-briefcase"></i></div>
               <div>
-                <span class="info-label" data-i18n="about.school">School</span>
-                <span class="info-value">Epitech</span>
+                <span class="info-label" data-i18n="info.status">Status</span>
+                <span class="info-value status-employed" data-i18n="info.employed">Full-time at Capgemini</span>
               </div>
             </div>
             <div class="info-row">
-              <span class="info-icon"><i class="fas fa-briefcase"></i></span>
+              <div class="info-icon"><i class="fas fa-graduation-cap"></i></div>
               <div>
-                <span class="info-label" data-i18n="about.availability">Availability</span>
-                <span class="info-value" data-i18n="about.from">From October 2025</span>
+                <span class="info-label" data-i18n="info.degree">Degree</span>
+                <span class="info-value" data-i18n="info.degree.val">Expert en ingénierie Logiciel</span>
               </div>
             </div>
             <div class="info-row">
-              <span class="info-icon"><i class="fas fa-language"></i></span>
+              <div class="info-icon"><i class="fas fa-language"></i></div>
               <div>
-                <span class="info-label" data-i18n="about.languages">Languages</span>
-                <span class="info-value">🇫🇷 FR · 🇬🇧 EN (B2)</span>
+                <span class="info-label" data-i18n="info.languages">Languages</span>
+                <span class="info-value">🇫🇷 French · 🇬🇧 English B2</span>
               </div>
             </div>
             <div class="info-row">
-              <span class="info-icon"><i class="fas fa-heart"></i></span>
+              <div class="info-icon"><i class="fas fa-heart"></i></div>
               <div>
-                <span class="info-label" data-i18n="about.interests">Interests</span>
-                <span class="info-value" data-i18n="about.hobbies">Marathon · Rugby · Football · Travel</span>
+                <span class="info-label" data-i18n="info.interests">Interests</span>
+                <span class="info-value" data-i18n="info.hobbies">Marathon · Rugby · Travel</span>
               </div>
             </div>
           </div>
@@ -168,56 +238,66 @@
     </div>
   </section>
 
-  <!-- ═══════════════════════ EXPERIENCE ═══════════════════════ -->
+  <!-- ══════════════════ EXPERIENCE ══════════════════ -->
   <section id="experience" class="section section-alt">
     <div class="container">
-      <div class="section-header reveal">
-        <span class="section-label mono" data-i18n="exp.label">// experience</span>
-        <h2 data-i18n="exp.title">My Journey</h2>
+      <div class="section-header">
+        <span class="pill-label reveal-up" data-i18n="exp.label">Experience</span>
+        <h2 class="reveal-up delay-1" data-i18n="exp.title">My Journey</h2>
       </div>
       <div class="timeline">
 
-        <!-- Capgemini -->
-        <div class="timeline-item reveal">
-          <div class="timeline-dot">
-            <i class="fas fa-briefcase"></i>
+        <!-- Capgemini CDI -->
+        <div class="timeline-item reveal-up">
+          <div class="tl-marker">
+            <div class="tl-dot active">
+              <i class="fas fa-briefcase"></i>
+            </div>
+            <div class="tl-pulse"></div>
           </div>
-          <div class="timeline-card">
+          <div class="timeline-card tilt-card current">
+            <div class="current-badge" data-i18n="exp.current">Current position</div>
             <div class="tl-header">
               <div>
-                <h3 data-i18n="exp.capgemini.role">CRM Consultant Intern</h3>
+                <h3 data-i18n="exp.capgemini.role">Microsoft Dynamics Consultant</h3>
                 <span class="tl-company">Capgemini</span>
               </div>
-              <span class="tl-date" data-i18n="exp.capgemini.date">Mar 2025 – Sep 2025</span>
+              <div class="tl-meta">
+                <span class="tl-date" data-i18n="exp.capgemini.date">Oct 2025 – Present</span>
+                <span class="tl-badge-cdi">CDI</span>
+              </div>
             </div>
-            <p class="tl-desc" data-i18n="exp.capgemini.desc">Configured Microsoft Dynamics CRM and built an AI ChatBot using Copilot Studio. Worked in enterprise environment on large-scale CRM deployments.</p>
+            <p class="tl-desc" data-i18n="exp.capgemini.desc">Configuring and deploying Microsoft Dynamics 365 CRM for enterprise clients. Building AI-powered ChatBots using Copilot Studio and Power Platform automations at large scale.</p>
             <div class="tl-tags">
-              <span class="tag">Microsoft Dynamics</span>
-              <span class="tag">Copilot Studio</span>
-              <span class="tag">AI / ChatBot</span>
-              <span class="tag">JavaScript</span>
+              <span class="tag tag-primary">Microsoft Dynamics</span>
+              <span class="tag tag-primary">Copilot Studio</span>
               <span class="tag">Power Platform</span>
+              <span class="tag">JavaScript</span>
+              <span class="tag">AI / ChatBot</span>
             </div>
           </div>
         </div>
 
         <!-- Groupe SII -->
-        <div class="timeline-item reveal">
-          <div class="timeline-dot">
-            <i class="fas fa-code"></i>
+        <div class="timeline-item reveal-up delay-1">
+          <div class="tl-marker">
+            <div class="tl-dot"><i class="fas fa-code"></i></div>
           </div>
-          <div class="timeline-card">
+          <div class="timeline-card tilt-card">
             <div class="tl-header">
               <div>
                 <h3 data-i18n="exp.sii.role">Full Stack Developer Intern</h3>
                 <span class="tl-company">Groupe SII</span>
               </div>
-              <span class="tl-date" data-i18n="exp.sii.date">Sep 2024 – Feb 2025</span>
+              <div class="tl-meta">
+                <span class="tl-date" data-i18n="exp.sii.date">Sep 2024 – Feb 2025</span>
+                <span class="tl-badge">Stage</span>
+              </div>
             </div>
-            <p class="tl-desc" data-i18n="exp.sii.desc">Built an interactive 3D train simulation powered by a predictive maintenance AI. Combined React frontend with ThreeJS 3D rendering and Python AI backend.</p>
+            <p class="tl-desc" data-i18n="exp.sii.desc">Built an interactive 3D train simulation driven by a predictive maintenance AI. React frontend with Three.js 3D rendering and a Python-based AI backend.</p>
             <div class="tl-tags">
-              <span class="tag tag-highlight">React</span>
-              <span class="tag tag-highlight">Three.js</span>
+              <span class="tag tag-primary">React</span>
+              <span class="tag tag-primary">Three.js</span>
               <span class="tag">Python</span>
               <span class="tag">AI / ML</span>
               <span class="tag">GitLab</span>
@@ -226,97 +306,99 @@
         </div>
 
         <!-- EoY Project -->
-        <div class="timeline-item reveal">
-          <div class="timeline-dot">
-            <i class="fas fa-star"></i>
+        <div class="timeline-item reveal-up delay-2">
+          <div class="tl-marker">
+            <div class="tl-dot featured"><i class="fas fa-star"></i></div>
           </div>
-          <div class="timeline-card featured">
-            <div class="featured-badge" data-i18n="exp.eoy.badge">Featured Project</div>
+          <div class="timeline-card tilt-card featured-card">
+            <div class="featured-badge" data-i18n="exp.featured">Featured Project</div>
             <div class="tl-header">
               <div>
-                <h3 data-i18n="exp.eoy.role">Project Manager — End-of-Study Project</h3>
+                <h3 data-i18n="exp.eoy.role">Project Manager — End-of-Study</h3>
                 <span class="tl-company">Epitech</span>
               </div>
-              <span class="tl-date" data-i18n="exp.eoy.date">2022 – 2025</span>
+              <div class="tl-meta">
+                <span class="tl-date" data-i18n="exp.eoy.date">2022 – 2025</span>
+              </div>
             </div>
-            <p class="tl-desc" data-i18n="exp.eoy.desc">Led the creation of a community platform for broadcasting and creating sign language videos — making digital content more accessible. Managed a full development team from conception to delivery.</p>
+            <p class="tl-desc" data-i18n="exp.eoy.desc">Led a team to build a community platform for broadcasting and creating sign language videos — making digital content more accessible. From conception to delivery over 3 years.</p>
             <div class="tl-tags">
-              <span class="tag tag-highlight">React Native</span>
-              <span class="tag tag-highlight">Next.js</span>
-              <span class="tag tag-highlight">TypeScript</span>
+              <span class="tag tag-primary">React Native</span>
+              <span class="tag tag-primary">Next.js</span>
+              <span class="tag tag-primary">TypeScript</span>
               <span class="tag">React</span>
-              <span class="tag">JavaScript</span>
               <span class="tag">Jira</span>
             </div>
           </div>
         </div>
 
         <!-- Cat-Amania -->
-        <div class="timeline-item reveal">
-          <div class="timeline-dot">
-            <i class="fas fa-code"></i>
+        <div class="timeline-item reveal-up delay-1">
+          <div class="tl-marker">
+            <div class="tl-dot"><i class="fas fa-code"></i></div>
           </div>
-          <div class="timeline-card">
+          <div class="timeline-card tilt-card">
             <div class="tl-header">
               <div>
                 <h3 data-i18n="exp.cat.role">Full Stack Developer Intern</h3>
                 <span class="tl-company">Cat-Amania</span>
               </div>
-              <span class="tl-date" data-i18n="exp.cat.date">Apr 2023 – Jul 2023</span>
+              <div class="tl-meta">
+                <span class="tl-date" data-i18n="exp.cat.date">Apr – Jul 2023</span>
+                <span class="tl-badge">Stage</span>
+              </div>
             </div>
-            <p class="tl-desc" data-i18n="exp.cat.desc">Developed Python programs and data pipelines, and built interactive simulations using Unity 3D with C#.</p>
+            <p class="tl-desc" data-i18n="exp.cat.desc">Developed Python data pipelines and built interactive 3D simulations in Unity with C#.</p>
             <div class="tl-tags">
-              <span class="tag">Python</span>
-              <span class="tag">SQLite</span>
-              <span class="tag">Unity</span>
-              <span class="tag">C#</span>
-              <span class="tag">GitLab</span>
+              <span class="tag">Python</span><span class="tag">SQLite</span>
+              <span class="tag">Unity</span><span class="tag">C#</span>
             </div>
           </div>
         </div>
 
         <!-- ISEG -->
-        <div class="timeline-item reveal">
-          <div class="timeline-dot">
-            <i class="fas fa-chalkboard-teacher"></i>
+        <div class="timeline-item reveal-up delay-2">
+          <div class="tl-marker">
+            <div class="tl-dot"><i class="fas fa-chalkboard-teacher"></i></div>
           </div>
-          <div class="timeline-card">
+          <div class="timeline-card tilt-card">
             <div class="tl-header">
               <div>
                 <h3 data-i18n="exp.iseg.role">Teaching Assistant</h3>
                 <span class="tl-company">ISEG</span>
               </div>
-              <span class="tl-date" data-i18n="exp.iseg.date">Apr 2023</span>
+              <div class="tl-meta">
+                <span class="tl-date" data-i18n="exp.iseg.date">Apr 2023</span>
+              </div>
             </div>
-            <p class="tl-desc" data-i18n="exp.iseg.desc">Guided communication students through their first steps in web development, teaching fundamentals of HTML, CSS, PHP, and SQL.</p>
+            <p class="tl-desc" data-i18n="exp.iseg.desc">Guided communication students through web development fundamentals — HTML, CSS, PHP, SQL.</p>
             <div class="tl-tags">
-              <span class="tag">HTML</span>
-              <span class="tag">CSS</span>
-              <span class="tag">PHP</span>
-              <span class="tag">SQL</span>
+              <span class="tag">HTML</span><span class="tag">CSS</span>
+              <span class="tag">PHP</span><span class="tag">SQL</span>
             </div>
           </div>
         </div>
 
         <!-- Nature Graphique -->
-        <div class="timeline-item reveal">
-          <div class="timeline-dot">
-            <i class="fas fa-gamepad"></i>
+        <div class="timeline-item reveal-up delay-1">
+          <div class="tl-marker">
+            <div class="tl-dot"><i class="fas fa-cube"></i></div>
           </div>
-          <div class="timeline-card">
+          <div class="timeline-card tilt-card">
             <div class="tl-header">
               <div>
                 <h3 data-i18n="exp.nature.role">Unity Developer Intern</h3>
                 <span class="tl-company">Nature Graphique</span>
               </div>
-              <span class="tl-date" data-i18n="exp.nature.date">Jul 2021 – Dec 2021</span>
+              <div class="tl-meta">
+                <span class="tl-date" data-i18n="exp.nature.date">Jul – Dec 2021</span>
+                <span class="tl-badge">Stage</span>
+              </div>
             </div>
-            <p class="tl-desc" data-i18n="exp.nature.desc">Developed interactive Kinect motion-tracking modules integrated into Unity 3D environments.</p>
+            <p class="tl-desc" data-i18n="exp.nature.desc">Developed Kinect motion-tracking modules integrated into Unity 3D environments.</p>
             <div class="tl-tags">
-              <span class="tag">Unity</span>
-              <span class="tag">C#</span>
+              <span class="tag">Unity</span><span class="tag">C#</span>
               <span class="tag">Kinect</span>
-              <span class="tag">GitHub</span>
             </div>
           </div>
         </div>
@@ -325,184 +407,230 @@
     </div>
   </section>
 
-  <!-- ═══════════════════════ SKILLS ═══════════════════════ -->
+  <!-- ══════════════════ SKILLS ══════════════════ -->
   <section id="skills" class="section">
     <div class="container">
-      <div class="section-header reveal">
-        <span class="section-label mono" data-i18n="skills.label">// skills</span>
-        <h2 data-i18n="skills.title">Tech Stack</h2>
+      <div class="section-header">
+        <span class="pill-label reveal-up" data-i18n="skills.label">Skills</span>
+        <h2 class="reveal-up delay-1" data-i18n="skills.title">Tech Stack</h2>
       </div>
       <div class="skills-grid">
 
-        <div class="skill-category reveal">
-          <div class="skill-cat-header">
-            <i class="fas fa-globe"></i>
-            <h3 data-i18n="skills.web">Web Development</h3>
-          </div>
+        <div class="skill-cat reveal-up tilt-card">
+          <div class="skill-cat-icon"><i class="fas fa-globe"></i></div>
+          <h3 data-i18n="skills.web">Web Development</h3>
           <div class="skill-tags">
-            <span class="skill-tag level-high">React</span>
-            <span class="skill-tag level-high">Next.js</span>
-            <span class="skill-tag level-high">TypeScript</span>
-            <span class="skill-tag level-high">JavaScript</span>
-            <span class="skill-tag level-mid">HTML / CSS</span>
-            <span class="skill-tag level-mid">Flutter</span>
-            <span class="skill-tag level-mid">Three.js</span>
-            <span class="skill-tag level-low">Microsoft Dynamics</span>
-            <span class="skill-tag level-low">Power Platform</span>
+            <span class="stag high">React</span><span class="stag high">Next.js</span>
+            <span class="stag high">TypeScript</span><span class="stag high">JavaScript</span>
+            <span class="stag mid">HTML / CSS</span><span class="stag mid">Three.js</span>
+            <span class="stag mid">Flutter</span><span class="stag low">Microsoft Dynamics</span>
+            <span class="stag low">Power Platform</span>
           </div>
         </div>
 
-        <div class="skill-category reveal">
-          <div class="skill-cat-header">
-            <i class="fas fa-mobile-alt"></i>
-            <h3 data-i18n="skills.mobile">Mobile Development</h3>
-          </div>
+        <div class="skill-cat reveal-up delay-1 tilt-card">
+          <div class="skill-cat-icon"><i class="fas fa-mobile-alt"></i></div>
+          <h3 data-i18n="skills.mobile">Mobile</h3>
           <div class="skill-tags">
-            <span class="skill-tag level-high">React Native</span>
-            <span class="skill-tag level-mid">Flutter</span>
-            <span class="skill-tag level-mid">Android Studio</span>
+            <span class="stag high">React Native</span>
+            <span class="stag mid">Flutter</span>
+            <span class="stag mid">Android Studio</span>
           </div>
         </div>
 
-        <div class="skill-category reveal">
-          <div class="skill-cat-header">
-            <i class="fas fa-server"></i>
-            <h3 data-i18n="skills.backend">Backend & Databases</h3>
-          </div>
+        <div class="skill-cat reveal-up delay-2 tilt-card">
+          <div class="skill-cat-icon"><i class="fas fa-server"></i></div>
+          <h3 data-i18n="skills.backend">Backend</h3>
           <div class="skill-tags">
-            <span class="skill-tag level-high">Python</span>
-            <span class="skill-tag level-mid">Firebase</span>
-            <span class="skill-tag level-mid">MySQL</span>
-            <span class="skill-tag level-mid">SQLite</span>
-            <span class="skill-tag level-mid">PHP</span>
-            <span class="skill-tag level-low">Java</span>
-            <span class="skill-tag level-low">C / C++</span>
+            <span class="stag high">Python</span><span class="stag mid">Firebase</span>
+            <span class="stag mid">MySQL</span><span class="stag mid">SQLite</span>
+            <span class="stag mid">PHP</span><span class="stag low">Java</span>
+            <span class="stag low">C / C++</span>
           </div>
         </div>
 
-        <div class="skill-category reveal">
-          <div class="skill-cat-header">
-            <i class="fas fa-gamepad"></i>
-            <h3 data-i18n="skills.creative">3D & Creative</h3>
-          </div>
+        <div class="skill-cat reveal-up delay-1 tilt-card">
+          <div class="skill-cat-icon"><i class="fas fa-cube"></i></div>
+          <h3 data-i18n="skills.creative">3D & Creative</h3>
           <div class="skill-tags">
-            <span class="skill-tag level-high">Unity</span>
-            <span class="skill-tag level-high">C#</span>
-            <span class="skill-tag level-mid">Three.js</span>
-            <span class="skill-tag level-mid">Kinect</span>
+            <span class="stag high">Unity</span><span class="stag high">C#</span>
+            <span class="stag mid">Three.js</span><span class="stag mid">Kinect</span>
           </div>
         </div>
 
-        <div class="skill-category reveal">
-          <div class="skill-cat-header">
-            <i class="fas fa-tasks"></i>
-            <h3 data-i18n="skills.pm">Project Management</h3>
-          </div>
+        <div class="skill-cat reveal-up delay-2 tilt-card">
+          <div class="skill-cat-icon"><i class="fas fa-tasks"></i></div>
+          <h3 data-i18n="skills.pm">Project Management</h3>
           <div class="skill-tags">
-            <span class="skill-tag level-high">Git / GitHub / GitLab</span>
-            <span class="skill-tag level-high">Jira</span>
-            <span class="skill-tag level-mid">Power BI</span>
-            <span class="skill-tag level-mid">Agile / Scrum</span>
+            <span class="stag high">Git / GitHub / GitLab</span>
+            <span class="stag high">Jira</span>
+            <span class="stag mid">Power BI</span>
+            <span class="stag mid">Agile / Scrum</span>
           </div>
         </div>
 
-        <div class="skill-category reveal">
-          <div class="skill-cat-header">
-            <i class="fas fa-robot"></i>
-            <h3 data-i18n="skills.ai">AI & Automation</h3>
-          </div>
+        <div class="skill-cat reveal-up delay-1 tilt-card">
+          <div class="skill-cat-icon"><i class="fas fa-robot"></i></div>
+          <h3 data-i18n="skills.ai">AI & Automation</h3>
           <div class="skill-tags">
-            <span class="skill-tag level-mid">Copilot Studio</span>
-            <span class="skill-tag level-mid">Predictive AI (ML)</span>
-            <span class="skill-tag level-low">ChatBot Development</span>
+            <span class="stag high">Copilot Studio</span>
+            <span class="stag mid">Predictive AI</span>
+            <span class="stag mid">ChatBot Dev</span>
           </div>
         </div>
 
       </div>
 
-      <div class="skill-legend reveal">
-        <span class="legend-item"><span class="legend-dot level-high"></span><span data-i18n="skills.proficient">Proficient</span></span>
-        <span class="legend-item"><span class="legend-dot level-mid"></span><span data-i18n="skills.intermediate">Intermediate</span></span>
-        <span class="legend-item"><span class="legend-dot level-low"></span><span data-i18n="skills.familiar">Familiar</span></span>
+      <div class="skill-legend reveal-up">
+        <span class="legend-item"><span class="ld high"></span><span data-i18n="skills.high">Proficient</span></span>
+        <span class="legend-item"><span class="ld mid"></span><span data-i18n="skills.mid">Intermediate</span></span>
+        <span class="legend-item"><span class="ld low"></span><span data-i18n="skills.low">Familiar</span></span>
       </div>
     </div>
   </section>
 
-  <!-- ═══════════════════════ EDUCATION ═══════════════════════ -->
-  <section id="education" class="section section-alt">
+  <!-- ══════════════════ PROJECTS ══════════════════ -->
+  <section id="projects" class="section section-alt">
     <div class="container">
-      <div class="section-header reveal">
-        <span class="section-label mono" data-i18n="edu.label">// education</span>
-        <h2 data-i18n="edu.title">Education</h2>
+      <div class="section-header">
+        <span class="pill-label reveal-up" data-i18n="proj.label">Projects</span>
+        <h2 class="reveal-up delay-1" data-i18n="proj.title">Personal Projects</h2>
+        <p class="section-sub reveal-up delay-2">
+          <a href="https://github.com/julienlafargue" target="_blank" class="github-link">
+            <i class="fab fa-github"></i>
+            <span data-i18n="proj.github">View all on GitHub</span>
+          </a>
+        </p>
       </div>
-      <div class="edu-grid">
+      <div class="projects-grid">
 
-        <div class="edu-card reveal">
-          <div class="edu-icon">
-            <i class="fas fa-laptop-code"></i>
+        <div class="project-card reveal-up tilt-card">
+          <div class="proj-header">
+            <div class="proj-icon-wrap"><i class="fas fa-brain"></i></div>
+            <div class="proj-links">
+              <a href="https://github.com/julienlafargue/Gomoku" target="_blank" title="GitHub" class="proj-link"><i class="fab fa-github"></i></a>
+            </div>
           </div>
-          <div class="edu-content">
-            <div class="edu-header">
-              <div>
-                <h3>Epitech</h3>
-                <p class="edu-degree" data-i18n="edu.epitech.degree">Expert in Information Technology</p>
-              </div>
-              <span class="edu-date">2020 – 2025</span>
-            </div>
-            <p class="edu-desc" data-i18n="edu.epitech.desc">5-year engineering program focused on project-based learning. No traditional courses — pure hands-on development in teams, building real-world applications from day one.</p>
-            <div class="edu-tags">
-              <span class="tag">Bac+5</span>
-              <span class="tag">Engineering</span>
-              <span class="tag">Project-based</span>
-            </div>
+          <h3 data-i18n="proj.gomoku.title">Gomoku AI</h3>
+          <p class="proj-desc" data-i18n="proj.gomoku.desc">An artificial intelligence designed to master the Gomoku board game — built using advanced algorithms to compute the optimal move at every turn.</p>
+          <div class="proj-tags">
+            <span class="ptag">Python</span>
+            <span class="ptag">AI / Algorithms</span>
+            <span class="ptag">Game Theory</span>
           </div>
         </div>
 
-        <div class="edu-card reveal">
-          <div class="edu-icon">
-            <i class="fas fa-globe-europe"></i>
+        <div class="project-card reveal-up delay-1 tilt-card">
+          <div class="proj-header">
+            <div class="proj-icon-wrap orange"><i class="fas fa-bomb"></i></div>
+            <div class="proj-links">
+              <a href="https://github.com/julienlafargue/Indie-Studio" target="_blank" title="GitHub" class="proj-link"><i class="fab fa-github"></i></a>
+            </div>
           </div>
-          <div class="edu-content">
-            <div class="edu-header">
-              <div>
-                <h3>Technological University of Dublin</h3>
-                <p class="edu-degree" data-i18n="edu.dublin.degree">Diploma in IT Management (CPD in Business Computing)</p>
-              </div>
-              <span class="edu-date">2023 – 2024</span>
+          <h3 data-i18n="proj.bomberman.title">Indie Studio — Bomberman</h3>
+          <p class="proj-desc" data-i18n="proj.bomberman.desc">A faithful recreation of the classic Bomberman game, built entirely in C++ with a custom 3D rendering engine using Raylib.</p>
+          <div class="proj-tags">
+            <span class="ptag">C++</span>
+            <span class="ptag">3D Engine</span>
+            <span class="ptag">Game Dev</span>
+          </div>
+        </div>
+
+        <div class="project-card reveal-up delay-2 tilt-card">
+          <div class="proj-header">
+            <div class="proj-icon-wrap green"><i class="fas fa-gamepad"></i></div>
+            <div class="proj-links">
+              <a href="https://github.com/julienlafargue/MarvinDash" target="_blank" title="GitHub" class="proj-link"><i class="fab fa-github"></i></a>
             </div>
-            <p class="edu-desc" data-i18n="edu.dublin.desc">International exchange year in Ireland, deepening expertise in IT management and business computing while immersing in an English-speaking environment.</p>
-            <div class="edu-tags">
-              <span class="tag">🇮🇪 Ireland</span>
-              <span class="tag">IT Management</span>
-              <span class="tag">International</span>
+          </div>
+          <h3 data-i18n="proj.marvin.title">MarvinDash — Fighter Game</h3>
+          <p class="proj-desc" data-i18n="proj.marvin.desc">A complete fighting game with character selection, combat mechanics, and animations — a passion project exploring game engine fundamentals.</p>
+          <div class="proj-tags">
+            <span class="ptag">Multi-lang</span>
+            <span class="ptag">Game Dev</span>
+            <span class="ptag">Animation</span>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ══════════════════ EDUCATION ══════════════════ -->
+  <section id="education" class="section">
+    <div class="container">
+      <div class="section-header">
+        <span class="pill-label reveal-up" data-i18n="edu.label">Education</span>
+        <h2 class="reveal-up delay-1" data-i18n="edu.title">Formation</h2>
+      </div>
+      <div class="edu-grid">
+
+        <div class="edu-card reveal-up tilt-card">
+          <div class="edu-year-badge">2020 – 2025</div>
+          <div class="edu-top">
+            <div class="edu-icon-wrap"><i class="fas fa-laptop-code"></i></div>
+            <div>
+              <h3>Epitech</h3>
+              <p class="edu-degree" data-i18n="edu.epitech.degree">Expert en ingénierie Logiciel</p>
+              <p class="edu-promo" data-i18n="edu.epitech.promo">Promo 2025 · Bac+5</p>
             </div>
+          </div>
+          <p class="edu-desc" data-i18n="edu.epitech.desc">5-year engineering school built on project-based learning. No traditional lectures — pure hands-on development in teams, from day one. The best preparation for the real world.</p>
+          <div class="edu-pills">
+            <span class="epill">Bac+5</span>
+            <span class="epill">Engineering</span>
+            <span class="epill">Project-based</span>
+          </div>
+        </div>
+
+        <div class="edu-card reveal-up delay-1 tilt-card">
+          <div class="edu-year-badge">2023 – 2024</div>
+          <div class="edu-top">
+            <div class="edu-icon-wrap orange"><i class="fas fa-globe-europe"></i></div>
+            <div>
+              <h3>Technological University of Dublin</h3>
+              <p class="edu-degree" data-i18n="edu.dublin.degree">Diploma in IT Management</p>
+              <p class="edu-promo">CPD in Business Computing 🇮🇪</p>
+            </div>
+          </div>
+          <p class="edu-desc" data-i18n="edu.dublin.desc">Exchange year in Ireland — deepening IT management knowledge in a fully English-speaking environment, expanding my professional and cultural perspective.</p>
+          <div class="edu-pills">
+            <span class="epill">Ireland</span>
+            <span class="epill">IT Management</span>
+            <span class="epill">International</span>
           </div>
         </div>
 
       </div>
 
       <!-- Languages -->
-      <div class="lang-section reveal">
+      <div class="lang-wrap reveal-up">
         <h3 class="lang-title" data-i18n="edu.languages">Languages</h3>
-        <div class="lang-grid">
-          <div class="lang-card">
-            <span class="lang-flag">🇫🇷</span>
-            <div class="lang-info">
-              <span class="lang-name" data-i18n="edu.french">French</span>
-              <span class="lang-level" data-i18n="edu.native">Native</span>
+        <div class="lang-list">
+          <div class="lang-item">
+            <div class="lang-left">
+              <span class="lang-flag">🇫🇷</span>
+              <div>
+                <span class="lang-name" data-i18n="edu.french">French</span>
+                <span class="lang-sub" data-i18n="edu.native">Native</span>
+              </div>
             </div>
-            <div class="lang-bar">
-              <div class="lang-fill" style="width:100%"></div>
+            <div class="lang-bar-wrap">
+              <div class="lang-bar"><div class="lang-fill" style="--w:100%"></div></div>
+              <span class="lang-pct">Native</span>
             </div>
           </div>
-          <div class="lang-card">
-            <span class="lang-flag">🇬🇧</span>
-            <div class="lang-info">
-              <span class="lang-name" data-i18n="edu.english">English</span>
-              <span class="lang-level">B2 — TOEIC 795/990</span>
+          <div class="lang-item">
+            <div class="lang-left">
+              <span class="lang-flag">🇬🇧</span>
+              <div>
+                <span class="lang-name" data-i18n="edu.english">English</span>
+                <span class="lang-sub">B2 — TOEIC 795/990</span>
+              </div>
             </div>
-            <div class="lang-bar">
-              <div class="lang-fill" style="width:72%"></div>
+            <div class="lang-bar-wrap">
+              <div class="lang-bar"><div class="lang-fill" style="--w:72%"></div></div>
+              <span class="lang-pct">B2</span>
             </div>
           </div>
         </div>
@@ -510,31 +638,31 @@
     </div>
   </section>
 
-  <!-- ═══════════════════════ INTERESTS ═══════════════════════ -->
-  <section id="interests" class="section">
+  <!-- ══════════════════ INTERESTS ══════════════════ -->
+  <section id="interests" class="section section-alt">
     <div class="container">
-      <div class="section-header reveal">
-        <span class="section-label mono" data-i18n="int.label">// interests</span>
-        <h2 data-i18n="int.title">Beyond the Code</h2>
+      <div class="section-header">
+        <span class="pill-label reveal-up" data-i18n="int.label">Beyond work</span>
+        <h2 class="reveal-up delay-1" data-i18n="int.title">Beyond the Code</h2>
       </div>
       <div class="interest-grid">
-        <div class="interest-card reveal">
-          <div class="interest-icon">🏃</div>
+        <div class="interest-card reveal-up tilt-card">
+          <div class="interest-emoji">🏃</div>
           <h4 data-i18n="int.marathon">Marathon</h4>
-          <p data-i18n="int.marathon.desc">Paris 2025 Finisher — running as a discipline of consistency and endurance.</p>
+          <p data-i18n="int.marathon.desc">Paris 2025 Finisher — discipline, endurance, and the joy of pushing limits.</p>
         </div>
-        <div class="interest-card reveal">
-          <div class="interest-icon">🏉</div>
+        <div class="interest-card reveal-up delay-1 tilt-card">
+          <div class="interest-emoji">🏉</div>
           <h4 data-i18n="int.rugby">Rugby</h4>
-          <p data-i18n="int.rugby.desc">Team sport that taught me collaboration, strategy, and resilience.</p>
+          <p data-i18n="int.rugby.desc">Team spirit, strategy and resilience — values I carry into every project.</p>
         </div>
-        <div class="interest-card reveal">
-          <div class="interest-icon">⚽</div>
+        <div class="interest-card reveal-up delay-2 tilt-card">
+          <div class="interest-emoji">⚽</div>
           <h4 data-i18n="int.football">Football</h4>
-          <p data-i18n="int.football.desc">Passion since childhood — the beautiful game never gets old.</p>
+          <p data-i18n="int.football.desc">A lifelong passion — the beautiful game never gets old.</p>
         </div>
-        <div class="interest-card reveal">
-          <div class="interest-icon">✈️</div>
+        <div class="interest-card reveal-up delay-3 tilt-card">
+          <div class="interest-emoji">✈️</div>
           <h4 data-i18n="int.travel">Travel</h4>
           <p data-i18n="int.travel.desc">Exploring new cultures and perspectives. Ireland was just the beginning.</p>
         </div>
@@ -542,51 +670,69 @@
     </div>
   </section>
 
-  <!-- ═══════════════════════ CONTACT ═══════════════════════ -->
-  <section id="contact" class="section section-alt">
+  <!-- ══════════════════ CONTACT ══════════════════ -->
+  <section id="contact" class="section">
     <div class="container">
-      <div class="section-header reveal">
-        <span class="section-label mono" data-i18n="contact.label">// contact</span>
-        <h2 data-i18n="contact.title">Let's Work Together</h2>
-        <p class="section-sub reveal" data-i18n="contact.sub">I'm actively looking for opportunities from October 2025. Feel free to reach out!</p>
+      <div class="section-header">
+        <span class="pill-label reveal-up" data-i18n="contact.label">Contact</span>
+        <h2 class="reveal-up delay-1" data-i18n="contact.title">Get in touch</h2>
+        <p class="section-sub reveal-up delay-2" data-i18n="contact.sub">A question, a project, or just want to connect? I'd love to hear from you.</p>
       </div>
-      <div class="contact-grid reveal">
-        <a href="mailto:julien.lafargue@epitech.eu" class="contact-card">
-          <div class="contact-icon"><i class="fas fa-envelope"></i></div>
-          <div class="contact-info">
-            <span class="contact-label" data-i18n="contact.email">Email</span>
-            <span class="contact-value">julien.lafargue@epitech.eu</span>
+      <div class="contact-list reveal-up">
+        <a href="mailto:julien.lafargue@epitech.eu" class="contact-item">
+          <div class="ci-icon"><i class="fas fa-envelope"></i></div>
+          <div class="ci-info">
+            <span class="ci-label" data-i18n="contact.email">Email</span>
+            <span class="ci-val">julien.lafargue@epitech.eu</span>
           </div>
-          <i class="fas fa-arrow-right contact-arrow"></i>
+          <i class="fas fa-arrow-right ci-arrow"></i>
         </a>
-        <a href="https://www.linkedin.com/in/julien-lafargue-400047197/" target="_blank" class="contact-card">
-          <div class="contact-icon linkedin"><i class="fab fa-linkedin"></i></div>
-          <div class="contact-info">
-            <span class="contact-label">LinkedIn</span>
-            <span class="contact-value">julien-lafargue</span>
+        <a href="https://www.linkedin.com/in/julien-lafargue-400047197/" target="_blank" class="contact-item">
+          <div class="ci-icon linkedin"><i class="fab fa-linkedin"></i></div>
+          <div class="ci-info">
+            <span class="ci-label">LinkedIn</span>
+            <span class="ci-val">julien-lafargue-400047197</span>
           </div>
-          <i class="fas fa-arrow-right contact-arrow"></i>
+          <i class="fas fa-arrow-right ci-arrow"></i>
         </a>
-        <a href="tel:+33781972851" class="contact-card">
-          <div class="contact-icon phone"><i class="fas fa-phone"></i></div>
-          <div class="contact-info">
-            <span class="contact-label" data-i18n="contact.phone">Phone</span>
-            <span class="contact-value">+33 7 81 97 28 51</span>
+        <a href="https://github.com/julienlafargue" target="_blank" class="contact-item">
+          <div class="ci-icon github"><i class="fab fa-github"></i></div>
+          <div class="ci-info">
+            <span class="ci-label">GitHub</span>
+            <span class="ci-val">julienlafargue</span>
           </div>
-          <i class="fas fa-arrow-right contact-arrow"></i>
+          <i class="fas fa-arrow-right ci-arrow"></i>
+        </a>
+        <a href="tel:+33781972851" class="contact-item">
+          <div class="ci-icon phone"><i class="fas fa-phone"></i></div>
+          <div class="ci-info">
+            <span class="ci-label" data-i18n="contact.phone">Phone</span>
+            <span class="ci-val">+33 7 81 97 28 51</span>
+          </div>
+          <i class="fas fa-arrow-right ci-arrow"></i>
         </a>
       </div>
     </div>
   </section>
 
-  <!-- ═══════════════════════ FOOTER ═══════════════════════ -->
+  <!-- ══════════════════ FOOTER ══════════════════ -->
   <footer>
-    <div class="footer-inner">
-      <span class="footer-brand">JL<span class="brand-dot">.</span></span>
+    <div class="footer-inner container">
+      <svg class="footer-logo" width="36" height="36" viewBox="0 0 40 40" fill="none">
+        <rect width="40" height="40" rx="11" fill="url(#footerGrad)"/>
+        <defs>
+          <linearGradient id="footerGrad" x1="0" y1="0" x2="40" y2="40" gradientUnits="userSpaceOnUse">
+            <stop stop-color="#a78bfa"/><stop offset="1" stop-color="#f97316"/>
+          </linearGradient>
+        </defs>
+        <path d="M13 11h4.5v15.2c0 1.6-.5 2.8-1.4 3.7C15.2 30.8 14 31.2 12.5 31.2c-1.2 0-2.2-.3-3-.9l1.3-2.1c.4.3.9.5 1.5.5.5 0 .9-.2 1.2-.5.3-.3.5-.8.5-1.4V11z" fill="white"/>
+        <path d="M22 11h3v17.2h6.5V31H22V11z" fill="white"/>
+      </svg>
       <p class="footer-text" data-i18n="footer.text">Designed & built with ❤️ — Julien Lafargue 2025</p>
-      <div class="footer-links">
+      <div class="footer-socials">
         <a href="mailto:julien.lafargue@epitech.eu"><i class="fas fa-envelope"></i></a>
         <a href="https://www.linkedin.com/in/julien-lafargue-400047197/" target="_blank"><i class="fab fa-linkedin"></i></a>
+        <a href="https://github.com/julienlafargue" target="_blank"><i class="fab fa-github"></i></a>
       </div>
     </div>
   </footer>
