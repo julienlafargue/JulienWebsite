@@ -1,0 +1,596 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Julien Lafargue — Full Stack Developer & Project Manager</title>
+  <meta name="description" content="Portfolio of Julien Lafargue, Full Stack Developer & Project Manager. Epitech graduate available from October 2025." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <!-- ═══════════════════════ NAVBAR ═══════════════════════ -->
+  <nav id="navbar">
+    <div class="nav-inner">
+      <a href="#hero" class="nav-brand">JL<span class="brand-dot">.</span></a>
+      <div class="nav-links">
+        <a href="#about"      data-i18n="nav.about">About</a>
+        <a href="#experience" data-i18n="nav.experience">Experience</a>
+        <a href="#skills"     data-i18n="nav.skills">Skills</a>
+        <a href="#education"  data-i18n="nav.education">Education</a>
+        <a href="#contact"    data-i18n="nav.contact">Contact</a>
+      </div>
+      <div class="nav-actions">
+        <button class="lang-btn" id="langToggle" aria-label="Switch language">FR</button>
+        <button class="theme-btn" id="themeToggle" aria-label="Toggle theme">
+          <i class="fas fa-sun" id="themeIcon"></i>
+        </button>
+        <button class="hamburger" id="hamburger" aria-label="Menu">
+          <span></span><span></span><span></span>
+        </button>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Mobile menu -->
+  <div class="mobile-menu" id="mobileMenu">
+    <a href="#about"      data-i18n="nav.about">About</a>
+    <a href="#experience" data-i18n="nav.experience">Experience</a>
+    <a href="#skills"     data-i18n="nav.skills">Skills</a>
+    <a href="#education"  data-i18n="nav.education">Education</a>
+    <a href="#contact"    data-i18n="nav.contact">Contact</a>
+  </div>
+
+  <!-- ═══════════════════════ HERO ═══════════════════════ -->
+  <section id="hero">
+    <div class="hero-bg">
+      <div class="blob blob-1"></div>
+      <div class="blob blob-2"></div>
+      <div class="blob blob-3"></div>
+      <div class="grid-overlay"></div>
+    </div>
+    <div class="hero-content">
+      <div class="hero-badge reveal">
+        <span class="badge-dot"></span>
+        <span data-i18n="hero.available">Open to opportunities from October 2025</span>
+      </div>
+      <h1 class="hero-name reveal">
+        Julien<br /><span class="accent-gradient">Lafargue</span>
+      </h1>
+      <p class="hero-title reveal">
+        <span class="mono">&lt;</span>
+        <span data-i18n="hero.title">Full Stack Developer &amp; Project Manager</span>
+        <span class="mono">/&gt;</span>
+      </p>
+      <p class="hero-desc reveal" data-i18n="hero.desc">
+        Epitech student building innovative digital solutions — web, mobile, AI & project management across multiple industries.
+      </p>
+      <div class="hero-cta reveal">
+        <a href="#contact" class="btn btn-primary">
+          <i class="fas fa-paper-plane"></i>
+          <span data-i18n="hero.cta1">Get in touch</span>
+        </a>
+        <a href="#experience" class="btn btn-outline">
+          <i class="fas fa-arrow-down"></i>
+          <span data-i18n="hero.cta2">View my work</span>
+        </a>
+      </div>
+      <div class="hero-stats reveal">
+        <div class="stat">
+          <span class="stat-num">5+</span>
+          <span class="stat-label" data-i18n="hero.stat1">Internships</span>
+        </div>
+        <div class="stat-divider"></div>
+        <div class="stat">
+          <span class="stat-num">5</span>
+          <span class="stat-label" data-i18n="hero.stat2">Years at Epitech</span>
+        </div>
+        <div class="stat-divider"></div>
+        <div class="stat">
+          <span class="stat-num">2</span>
+          <span class="stat-label" data-i18n="hero.stat3">Countries</span>
+        </div>
+      </div>
+    </div>
+    <div class="scroll-hint">
+      <div class="scroll-line"></div>
+    </div>
+  </section>
+
+  <!-- ═══════════════════════ ABOUT ═══════════════════════ -->
+  <section id="about" class="section">
+    <div class="container">
+      <div class="section-header reveal">
+        <span class="section-label mono" data-i18n="about.label">// about me</span>
+        <h2 data-i18n="about.title">Who am I?</h2>
+      </div>
+      <div class="about-grid">
+        <div class="about-text reveal">
+          <p data-i18n="about.p1">I'm a 5th-year Epitech student specializing in Full Stack Development and Project Management, currently looking for my first position from October 2025.</p>
+          <p data-i18n="about.p2">My journey spans Unity game development, AI-based train simulations, CRM configuration at Capgemini, and building a sign language community platform from scratch. I love tackling complex problems in dynamic, innovative teams.</p>
+          <p data-i18n="about.p3">I spent a year at the Technological University of Dublin, sharpening my English and expanding my perspective. When I'm not coding, you'll find me on a marathon track (Paris 2025 finisher! 🏅), a rugby pitch, or exploring new countries.</p>
+          <div class="about-links">
+            <a href="mailto:julien.lafargue@epitech.eu" class="about-link">
+              <i class="fas fa-envelope"></i> julien.lafargue@epitech.eu
+            </a>
+            <a href="https://www.linkedin.com/in/julien-lafargue-400047197/" target="_blank" class="about-link">
+              <i class="fab fa-linkedin"></i> LinkedIn
+            </a>
+            <a href="tel:+33781972851" class="about-link">
+              <i class="fas fa-phone"></i> +33 7 81 97 28 51
+            </a>
+          </div>
+        </div>
+        <div class="about-card reveal">
+          <div class="info-card">
+            <div class="info-row">
+              <span class="info-icon"><i class="fas fa-map-marker-alt"></i></span>
+              <div>
+                <span class="info-label" data-i18n="about.location">Location</span>
+                <span class="info-value">France 🇫🇷</span>
+              </div>
+            </div>
+            <div class="info-row">
+              <span class="info-icon"><i class="fas fa-graduation-cap"></i></span>
+              <div>
+                <span class="info-label" data-i18n="about.school">School</span>
+                <span class="info-value">Epitech</span>
+              </div>
+            </div>
+            <div class="info-row">
+              <span class="info-icon"><i class="fas fa-briefcase"></i></span>
+              <div>
+                <span class="info-label" data-i18n="about.availability">Availability</span>
+                <span class="info-value" data-i18n="about.from">From October 2025</span>
+              </div>
+            </div>
+            <div class="info-row">
+              <span class="info-icon"><i class="fas fa-language"></i></span>
+              <div>
+                <span class="info-label" data-i18n="about.languages">Languages</span>
+                <span class="info-value">🇫🇷 FR · 🇬🇧 EN (B2)</span>
+              </div>
+            </div>
+            <div class="info-row">
+              <span class="info-icon"><i class="fas fa-heart"></i></span>
+              <div>
+                <span class="info-label" data-i18n="about.interests">Interests</span>
+                <span class="info-value" data-i18n="about.hobbies">Marathon · Rugby · Football · Travel</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══════════════════════ EXPERIENCE ═══════════════════════ -->
+  <section id="experience" class="section section-alt">
+    <div class="container">
+      <div class="section-header reveal">
+        <span class="section-label mono" data-i18n="exp.label">// experience</span>
+        <h2 data-i18n="exp.title">My Journey</h2>
+      </div>
+      <div class="timeline">
+
+        <!-- Capgemini -->
+        <div class="timeline-item reveal">
+          <div class="timeline-dot">
+            <i class="fas fa-briefcase"></i>
+          </div>
+          <div class="timeline-card">
+            <div class="tl-header">
+              <div>
+                <h3 data-i18n="exp.capgemini.role">CRM Consultant Intern</h3>
+                <span class="tl-company">Capgemini</span>
+              </div>
+              <span class="tl-date" data-i18n="exp.capgemini.date">Mar 2025 – Sep 2025</span>
+            </div>
+            <p class="tl-desc" data-i18n="exp.capgemini.desc">Configured Microsoft Dynamics CRM and built an AI ChatBot using Copilot Studio. Worked in enterprise environment on large-scale CRM deployments.</p>
+            <div class="tl-tags">
+              <span class="tag">Microsoft Dynamics</span>
+              <span class="tag">Copilot Studio</span>
+              <span class="tag">AI / ChatBot</span>
+              <span class="tag">JavaScript</span>
+              <span class="tag">Power Platform</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Groupe SII -->
+        <div class="timeline-item reveal">
+          <div class="timeline-dot">
+            <i class="fas fa-code"></i>
+          </div>
+          <div class="timeline-card">
+            <div class="tl-header">
+              <div>
+                <h3 data-i18n="exp.sii.role">Full Stack Developer Intern</h3>
+                <span class="tl-company">Groupe SII</span>
+              </div>
+              <span class="tl-date" data-i18n="exp.sii.date">Sep 2024 – Feb 2025</span>
+            </div>
+            <p class="tl-desc" data-i18n="exp.sii.desc">Built an interactive 3D train simulation powered by a predictive maintenance AI. Combined React frontend with ThreeJS 3D rendering and Python AI backend.</p>
+            <div class="tl-tags">
+              <span class="tag tag-highlight">React</span>
+              <span class="tag tag-highlight">Three.js</span>
+              <span class="tag">Python</span>
+              <span class="tag">AI / ML</span>
+              <span class="tag">GitLab</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- EoY Project -->
+        <div class="timeline-item reveal">
+          <div class="timeline-dot">
+            <i class="fas fa-star"></i>
+          </div>
+          <div class="timeline-card featured">
+            <div class="featured-badge" data-i18n="exp.eoy.badge">Featured Project</div>
+            <div class="tl-header">
+              <div>
+                <h3 data-i18n="exp.eoy.role">Project Manager — End-of-Study Project</h3>
+                <span class="tl-company">Epitech</span>
+              </div>
+              <span class="tl-date" data-i18n="exp.eoy.date">2022 – 2025</span>
+            </div>
+            <p class="tl-desc" data-i18n="exp.eoy.desc">Led the creation of a community platform for broadcasting and creating sign language videos — making digital content more accessible. Managed a full development team from conception to delivery.</p>
+            <div class="tl-tags">
+              <span class="tag tag-highlight">React Native</span>
+              <span class="tag tag-highlight">Next.js</span>
+              <span class="tag tag-highlight">TypeScript</span>
+              <span class="tag">React</span>
+              <span class="tag">JavaScript</span>
+              <span class="tag">Jira</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Cat-Amania -->
+        <div class="timeline-item reveal">
+          <div class="timeline-dot">
+            <i class="fas fa-code"></i>
+          </div>
+          <div class="timeline-card">
+            <div class="tl-header">
+              <div>
+                <h3 data-i18n="exp.cat.role">Full Stack Developer Intern</h3>
+                <span class="tl-company">Cat-Amania</span>
+              </div>
+              <span class="tl-date" data-i18n="exp.cat.date">Apr 2023 – Jul 2023</span>
+            </div>
+            <p class="tl-desc" data-i18n="exp.cat.desc">Developed Python programs and data pipelines, and built interactive simulations using Unity 3D with C#.</p>
+            <div class="tl-tags">
+              <span class="tag">Python</span>
+              <span class="tag">SQLite</span>
+              <span class="tag">Unity</span>
+              <span class="tag">C#</span>
+              <span class="tag">GitLab</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- ISEG -->
+        <div class="timeline-item reveal">
+          <div class="timeline-dot">
+            <i class="fas fa-chalkboard-teacher"></i>
+          </div>
+          <div class="timeline-card">
+            <div class="tl-header">
+              <div>
+                <h3 data-i18n="exp.iseg.role">Teaching Assistant</h3>
+                <span class="tl-company">ISEG</span>
+              </div>
+              <span class="tl-date" data-i18n="exp.iseg.date">Apr 2023</span>
+            </div>
+            <p class="tl-desc" data-i18n="exp.iseg.desc">Guided communication students through their first steps in web development, teaching fundamentals of HTML, CSS, PHP, and SQL.</p>
+            <div class="tl-tags">
+              <span class="tag">HTML</span>
+              <span class="tag">CSS</span>
+              <span class="tag">PHP</span>
+              <span class="tag">SQL</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Nature Graphique -->
+        <div class="timeline-item reveal">
+          <div class="timeline-dot">
+            <i class="fas fa-gamepad"></i>
+          </div>
+          <div class="timeline-card">
+            <div class="tl-header">
+              <div>
+                <h3 data-i18n="exp.nature.role">Unity Developer Intern</h3>
+                <span class="tl-company">Nature Graphique</span>
+              </div>
+              <span class="tl-date" data-i18n="exp.nature.date">Jul 2021 – Dec 2021</span>
+            </div>
+            <p class="tl-desc" data-i18n="exp.nature.desc">Developed interactive Kinect motion-tracking modules integrated into Unity 3D environments.</p>
+            <div class="tl-tags">
+              <span class="tag">Unity</span>
+              <span class="tag">C#</span>
+              <span class="tag">Kinect</span>
+              <span class="tag">GitHub</span>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══════════════════════ SKILLS ═══════════════════════ -->
+  <section id="skills" class="section">
+    <div class="container">
+      <div class="section-header reveal">
+        <span class="section-label mono" data-i18n="skills.label">// skills</span>
+        <h2 data-i18n="skills.title">Tech Stack</h2>
+      </div>
+      <div class="skills-grid">
+
+        <div class="skill-category reveal">
+          <div class="skill-cat-header">
+            <i class="fas fa-globe"></i>
+            <h3 data-i18n="skills.web">Web Development</h3>
+          </div>
+          <div class="skill-tags">
+            <span class="skill-tag level-high">React</span>
+            <span class="skill-tag level-high">Next.js</span>
+            <span class="skill-tag level-high">TypeScript</span>
+            <span class="skill-tag level-high">JavaScript</span>
+            <span class="skill-tag level-mid">HTML / CSS</span>
+            <span class="skill-tag level-mid">Flutter</span>
+            <span class="skill-tag level-mid">Three.js</span>
+            <span class="skill-tag level-low">Microsoft Dynamics</span>
+            <span class="skill-tag level-low">Power Platform</span>
+          </div>
+        </div>
+
+        <div class="skill-category reveal">
+          <div class="skill-cat-header">
+            <i class="fas fa-mobile-alt"></i>
+            <h3 data-i18n="skills.mobile">Mobile Development</h3>
+          </div>
+          <div class="skill-tags">
+            <span class="skill-tag level-high">React Native</span>
+            <span class="skill-tag level-mid">Flutter</span>
+            <span class="skill-tag level-mid">Android Studio</span>
+          </div>
+        </div>
+
+        <div class="skill-category reveal">
+          <div class="skill-cat-header">
+            <i class="fas fa-server"></i>
+            <h3 data-i18n="skills.backend">Backend & Databases</h3>
+          </div>
+          <div class="skill-tags">
+            <span class="skill-tag level-high">Python</span>
+            <span class="skill-tag level-mid">Firebase</span>
+            <span class="skill-tag level-mid">MySQL</span>
+            <span class="skill-tag level-mid">SQLite</span>
+            <span class="skill-tag level-mid">PHP</span>
+            <span class="skill-tag level-low">Java</span>
+            <span class="skill-tag level-low">C / C++</span>
+          </div>
+        </div>
+
+        <div class="skill-category reveal">
+          <div class="skill-cat-header">
+            <i class="fas fa-gamepad"></i>
+            <h3 data-i18n="skills.creative">3D & Creative</h3>
+          </div>
+          <div class="skill-tags">
+            <span class="skill-tag level-high">Unity</span>
+            <span class="skill-tag level-high">C#</span>
+            <span class="skill-tag level-mid">Three.js</span>
+            <span class="skill-tag level-mid">Kinect</span>
+          </div>
+        </div>
+
+        <div class="skill-category reveal">
+          <div class="skill-cat-header">
+            <i class="fas fa-tasks"></i>
+            <h3 data-i18n="skills.pm">Project Management</h3>
+          </div>
+          <div class="skill-tags">
+            <span class="skill-tag level-high">Git / GitHub / GitLab</span>
+            <span class="skill-tag level-high">Jira</span>
+            <span class="skill-tag level-mid">Power BI</span>
+            <span class="skill-tag level-mid">Agile / Scrum</span>
+          </div>
+        </div>
+
+        <div class="skill-category reveal">
+          <div class="skill-cat-header">
+            <i class="fas fa-robot"></i>
+            <h3 data-i18n="skills.ai">AI & Automation</h3>
+          </div>
+          <div class="skill-tags">
+            <span class="skill-tag level-mid">Copilot Studio</span>
+            <span class="skill-tag level-mid">Predictive AI (ML)</span>
+            <span class="skill-tag level-low">ChatBot Development</span>
+          </div>
+        </div>
+
+      </div>
+
+      <div class="skill-legend reveal">
+        <span class="legend-item"><span class="legend-dot level-high"></span><span data-i18n="skills.proficient">Proficient</span></span>
+        <span class="legend-item"><span class="legend-dot level-mid"></span><span data-i18n="skills.intermediate">Intermediate</span></span>
+        <span class="legend-item"><span class="legend-dot level-low"></span><span data-i18n="skills.familiar">Familiar</span></span>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══════════════════════ EDUCATION ═══════════════════════ -->
+  <section id="education" class="section section-alt">
+    <div class="container">
+      <div class="section-header reveal">
+        <span class="section-label mono" data-i18n="edu.label">// education</span>
+        <h2 data-i18n="edu.title">Education</h2>
+      </div>
+      <div class="edu-grid">
+
+        <div class="edu-card reveal">
+          <div class="edu-icon">
+            <i class="fas fa-laptop-code"></i>
+          </div>
+          <div class="edu-content">
+            <div class="edu-header">
+              <div>
+                <h3>Epitech</h3>
+                <p class="edu-degree" data-i18n="edu.epitech.degree">Expert in Information Technology</p>
+              </div>
+              <span class="edu-date">2020 – 2025</span>
+            </div>
+            <p class="edu-desc" data-i18n="edu.epitech.desc">5-year engineering program focused on project-based learning. No traditional courses — pure hands-on development in teams, building real-world applications from day one.</p>
+            <div class="edu-tags">
+              <span class="tag">Bac+5</span>
+              <span class="tag">Engineering</span>
+              <span class="tag">Project-based</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="edu-card reveal">
+          <div class="edu-icon">
+            <i class="fas fa-globe-europe"></i>
+          </div>
+          <div class="edu-content">
+            <div class="edu-header">
+              <div>
+                <h3>Technological University of Dublin</h3>
+                <p class="edu-degree" data-i18n="edu.dublin.degree">Diploma in IT Management (CPD in Business Computing)</p>
+              </div>
+              <span class="edu-date">2023 – 2024</span>
+            </div>
+            <p class="edu-desc" data-i18n="edu.dublin.desc">International exchange year in Ireland, deepening expertise in IT management and business computing while immersing in an English-speaking environment.</p>
+            <div class="edu-tags">
+              <span class="tag">🇮🇪 Ireland</span>
+              <span class="tag">IT Management</span>
+              <span class="tag">International</span>
+            </div>
+          </div>
+        </div>
+
+      </div>
+
+      <!-- Languages -->
+      <div class="lang-section reveal">
+        <h3 class="lang-title" data-i18n="edu.languages">Languages</h3>
+        <div class="lang-grid">
+          <div class="lang-card">
+            <span class="lang-flag">🇫🇷</span>
+            <div class="lang-info">
+              <span class="lang-name" data-i18n="edu.french">French</span>
+              <span class="lang-level" data-i18n="edu.native">Native</span>
+            </div>
+            <div class="lang-bar">
+              <div class="lang-fill" style="width:100%"></div>
+            </div>
+          </div>
+          <div class="lang-card">
+            <span class="lang-flag">🇬🇧</span>
+            <div class="lang-info">
+              <span class="lang-name" data-i18n="edu.english">English</span>
+              <span class="lang-level">B2 — TOEIC 795/990</span>
+            </div>
+            <div class="lang-bar">
+              <div class="lang-fill" style="width:72%"></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══════════════════════ INTERESTS ═══════════════════════ -->
+  <section id="interests" class="section">
+    <div class="container">
+      <div class="section-header reveal">
+        <span class="section-label mono" data-i18n="int.label">// interests</span>
+        <h2 data-i18n="int.title">Beyond the Code</h2>
+      </div>
+      <div class="interest-grid">
+        <div class="interest-card reveal">
+          <div class="interest-icon">🏃</div>
+          <h4 data-i18n="int.marathon">Marathon</h4>
+          <p data-i18n="int.marathon.desc">Paris 2025 Finisher — running as a discipline of consistency and endurance.</p>
+        </div>
+        <div class="interest-card reveal">
+          <div class="interest-icon">🏉</div>
+          <h4 data-i18n="int.rugby">Rugby</h4>
+          <p data-i18n="int.rugby.desc">Team sport that taught me collaboration, strategy, and resilience.</p>
+        </div>
+        <div class="interest-card reveal">
+          <div class="interest-icon">⚽</div>
+          <h4 data-i18n="int.football">Football</h4>
+          <p data-i18n="int.football.desc">Passion since childhood — the beautiful game never gets old.</p>
+        </div>
+        <div class="interest-card reveal">
+          <div class="interest-icon">✈️</div>
+          <h4 data-i18n="int.travel">Travel</h4>
+          <p data-i18n="int.travel.desc">Exploring new cultures and perspectives. Ireland was just the beginning.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══════════════════════ CONTACT ═══════════════════════ -->
+  <section id="contact" class="section section-alt">
+    <div class="container">
+      <div class="section-header reveal">
+        <span class="section-label mono" data-i18n="contact.label">// contact</span>
+        <h2 data-i18n="contact.title">Let's Work Together</h2>
+        <p class="section-sub reveal" data-i18n="contact.sub">I'm actively looking for opportunities from October 2025. Feel free to reach out!</p>
+      </div>
+      <div class="contact-grid reveal">
+        <a href="mailto:julien.lafargue@epitech.eu" class="contact-card">
+          <div class="contact-icon"><i class="fas fa-envelope"></i></div>
+          <div class="contact-info">
+            <span class="contact-label" data-i18n="contact.email">Email</span>
+            <span class="contact-value">julien.lafargue@epitech.eu</span>
+          </div>
+          <i class="fas fa-arrow-right contact-arrow"></i>
+        </a>
+        <a href="https://www.linkedin.com/in/julien-lafargue-400047197/" target="_blank" class="contact-card">
+          <div class="contact-icon linkedin"><i class="fab fa-linkedin"></i></div>
+          <div class="contact-info">
+            <span class="contact-label">LinkedIn</span>
+            <span class="contact-value">julien-lafargue</span>
+          </div>
+          <i class="fas fa-arrow-right contact-arrow"></i>
+        </a>
+        <a href="tel:+33781972851" class="contact-card">
+          <div class="contact-icon phone"><i class="fas fa-phone"></i></div>
+          <div class="contact-info">
+            <span class="contact-label" data-i18n="contact.phone">Phone</span>
+            <span class="contact-value">+33 7 81 97 28 51</span>
+          </div>
+          <i class="fas fa-arrow-right contact-arrow"></i>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══════════════════════ FOOTER ═══════════════════════ -->
+  <footer>
+    <div class="footer-inner">
+      <span class="footer-brand">JL<span class="brand-dot">.</span></span>
+      <p class="footer-text" data-i18n="footer.text">Designed & built with ❤️ — Julien Lafargue 2025</p>
+      <div class="footer-links">
+        <a href="mailto:julien.lafargue@epitech.eu"><i class="fas fa-envelope"></i></a>
+        <a href="https://www.linkedin.com/in/julien-lafargue-400047197/" target="_blank"><i class="fab fa-linkedin"></i></a>
+      </div>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
